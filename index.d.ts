@@ -2,7 +2,7 @@
 // Project: https://golden-layout.com/
 
 declare module 'golden-layout' {
-    class GoldenLayout implements GoldenLayout.EventEmitter {
+    class LayoutManager implements GoldenLayout.EventEmitter {
         /**
          * The topmost item in the layout item tree. In browser terms: Think of the GoldenLayout instance as window
          * object and of goldenLayout.root as the document.
@@ -645,7 +645,7 @@ declare module 'golden-layout' {
             /*
              * A reference to the GoldenLayout instance this container belongs to
              */
-            layoutManager: GoldenLayout;
+            layoutManager: LayoutManager;
 
             /**
              * True if the item is currently hidden
@@ -734,7 +734,7 @@ declare module 'golden-layout' {
             /**
              * Returns the GoldenLayout instance from the child window
              */
-            getGlInstance(): GoldenLayout;
+            getGlInstance(): LayoutManager;
 
             /**
              * Returns the native Window object
@@ -756,7 +756,7 @@ declare module 'golden-layout' {
             /**
              * A reference to the LayoutManager instance
              */
-            layoutManager: GoldenLayout;
+            layoutManager: LayoutManager;
 
             /**
              * A reference to the Stack this Header belongs to
